@@ -8,14 +8,14 @@
     .long CHECKSUM
 
 .section .text
-.extern kernelMain
+.extern KernelMain
 .global loader
 
 loader:
     mov $kernel_stack, %esp
     push %eax
     push %ebx
-    call kernelMain
+    call KernelMain
 
 _stop:
     cli

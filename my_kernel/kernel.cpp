@@ -1,7 +1,7 @@
 #include "types.h"
 #include "gdt.h"
 
-void printk(char* str)
+void Printk(char* str)
 {
     static uint16_t* VideoMemory = (uint16_t*)0xb8000;
 
@@ -38,11 +38,11 @@ void printk(char* str)
     }
 }
 
-extern "C" void kernelMain(void* multiboot_structure, uint32_t magicnumber)
+extern "C" void KernelMain(void* multiboot_structure, uint32_t magicnumber)
 {
-    printk("Wellcome to ducndcOS <ducndc.github.io>\n");
-    printk("Author: Chung Duc Nguyen Dang\n");
-    printk("Email: nguyendangchungduc1999@gmail.com\n");
+    Printk("Wellcome to ducndcOS <ducndc.github.io>\n");
+    Printk("Author: Chung Duc Nguyen Dang\n");
+    Printk("Email: nguyendangchungduc1999@gmail.com\n");
 
     GlobalDescriptorTable gdt;
 
