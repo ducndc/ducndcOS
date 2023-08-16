@@ -9,12 +9,12 @@ class GlobalDescriptorTable
         class SegmentDescriptor
         {
             private:
-                uint16_t limit_lo;
-                uint16_t base_lo;
-                uint8_t base_hi;
-                uint8_t type;
-                uint8_t flags_limit_hi;
-                uint8_t base_vhi;
+                uint16_t m_limit_lo;
+                uint16_t m_base_lo;
+                uint8_t m_base_hi;
+                uint8_t m_type;
+                uint8_t m_flags_limit_hi;
+                uint8_t m_base_vhi;
             public:
                 SegmentDescriptor(uint32_t base, uint32_t limit, uint8_t type);
                 uint32_t Base();
@@ -22,10 +22,10 @@ class GlobalDescriptorTable
 
         } __attribute__((packed));
 
-        SegmentDescriptor nullSegmentSelector;
-        SegmentDescriptor unusedSegmentSelector;
-        SegmentDescriptor codeSegmentSelector;
-        SegmentDescriptor dataSegmentSelector;
+        SegmentDescriptor m_nullSegmentSelector;
+        SegmentDescriptor m_unusedSegmentSelector;
+        SegmentDescriptor m_codeSegmentSelector;
+        SegmentDescriptor m_dataSegmentSelector;
     public:
         GlobalDescriptorTable();
         ~GlobalDescriptorTable();
