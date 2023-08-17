@@ -1,5 +1,6 @@
 #include "types.h"
 #include "gdt.h"
+#include "interrupts.h"
 
 void Printk(char* str)
 {
@@ -45,6 +46,9 @@ extern "C" void KernelMain(void* multiboot_structure, uint32_t magicnumber)
     Printk("Email: nguyendangchungduc1999@gmail.com\n");
 
     GlobalDescriptorTable gdt;
+    InterruptManager interrupts(&gdt);
+
+    interrupts.Activate();
 
     while(1);
 }
