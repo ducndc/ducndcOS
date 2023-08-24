@@ -1,0 +1,98 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+-output	Makefile	/^	grub-mkrescue --output=$@ iso$/;"	m
+ASPARAMS	Makefile	/^ASPARAMS = --32$/;"	m
+Activate	src/interrupts.cpp	/^InterruptManager::Activate($/;"	f	class:InterruptManager
+Base	src/gdt.cpp	/^GlobalDescriptorTable::SegmentDescriptor::Base($/;"	f	class:GlobalDescriptorTable::SegmentDescriptor
+CPPPARAMS	Makefile	/^CPPPARAMS = -m32 -w -fno-use-cxa-atexit -nostdlib -fno-builtin -fno-rtti -fno-exceptions -fno-leading-underscore$/;"	m
+CURRENT_PATH	Makefile	/^CURRENT_PATH = $(shell pwd)$/;"	m
+CodeSegmentSelector	src/gdt.cpp	/^GlobalDescriptorTable::CodeSegmentSelector($/;"	f	class:GlobalDescriptorTable
+DataSegmentSelector	src/gdt.cpp	/^GlobalDescriptorTable::DataSegmentSelector($/;"	f	class:GlobalDescriptorTable
+GateDescriptor	inc/interrupts.h	/^    struct GateDescriptor {$/;"	s	class:InterruptManager
+GlobalDescriptorTable	inc/gdt.h	/^class GlobalDescriptorTable$/;"	c
+GlobalDescriptorTable	src/gdt.cpp	/^GlobalDescriptorTable::GlobalDescriptorTable($/;"	f	class:GlobalDescriptorTable
+HandleInterrupt	src/interrupts.cpp	/^InterruptManager::HandleInterrupt($/;"	f	class:InterruptManager
+HandleInterruptRequest	src/interruptstubs.s	/^HandleInterruptRequest 0x00$/;"	l
+HandleInterruptRequest	src/interruptstubs.s	/^HandleInterruptRequest 0x01$/;"	l
+InterruptDescriptorTablePointer	inc/interrupts.h	/^    struct InterruptDescriptorTablePointer {$/;"	s	class:InterruptManager
+InterruptManager	inc/interrupts.h	/^class InterruptManager$/;"	c
+InterruptManager	src/interrupts.cpp	/^InterruptManager::InterruptManager($/;"	f	class:InterruptManager
+KernelMain	src/kernel.cpp	/^KernelMain($/;"	f
+LDPARAMS	Makefile	/^LDPARAMS = -melf_i386$/;"	m
+Limit	src/gdt.cpp	/^GlobalDescriptorTable::SegmentDescriptor::Limit($/;"	f	class:GlobalDescriptorTable::SegmentDescriptor
+Port	inc/port.h	/^class Port$/;"	c
+Port	src/port.cpp	/^Port::Port($/;"	f	class:Port
+Port16Bit	inc/port.h	/^class Port16Bit : public Port$/;"	c
+Port16Bit	src/port.cpp	/^Port16Bit::Port16Bit($/;"	f	class:Port16Bit
+Port32Bit	inc/port.h	/^class Port32Bit : public Port$/;"	c
+Port32Bit	src/port.cpp	/^Port32Bit::Port32Bit($/;"	f	class:Port32Bit
+Port8Bit	inc/port.h	/^class Port8Bit : public Port$/;"	c
+Port8Bit	src/port.cpp	/^Port8Bit::Port8Bit($/;"	f	class:Port8Bit
+Port8BitSlow	inc/port.h	/^class Port8BitSlow : public Port8Bit$/;"	c
+Port8BitSlow	src/port.cpp	/^Port8BitSlow::Port8BitSlow($/;"	f	class:Port8BitSlow
+Printk	src/kernel.cpp	/^Printk($/;"	f
+Read	src/port.cpp	/^Port16Bit::Read($/;"	f	class:Port16Bit
+Read	src/port.cpp	/^Port32Bit::Read($/;"	f	class:Port32Bit
+Read	src/port.cpp	/^Port8Bit::Read($/;"	f	class:Port8Bit
+SegmentDescriptor	inc/gdt.h	/^    class SegmentDescriptor$/;"	c	class:GlobalDescriptorTable
+SegmentDescriptor	src/gdt.cpp	/^GlobalDescriptorTable::SegmentDescriptor::SegmentDescriptor($/;"	f	class:GlobalDescriptorTable::SegmentDescriptor
+SetInterruptDescriptorTableEntry	src/interrupts.cpp	/^InterruptManager::SetInterruptDescriptorTableEntry($/;"	f	class:InterruptManager
+Write	src/port.cpp	/^Port16Bit::Write($/;"	f	class:Port16Bit
+Write	src/port.cpp	/^Port32Bit::Write($/;"	f	class:Port32Bit
+Write	src/port.cpp	/^Port8Bit::Write($/;"	f	class:Port8Bit
+Write	src/port.cpp	/^Port8BitSlow::Write($/;"	f	class:Port8BitSlow
+_ZN16InterruptManager22IgnoreInterruptRequestEv	src/interruptstubs.s	/^_ZN16InterruptManager22IgnoreInterruptRequestEv:$/;"	l
+__GDT_H	inc/gdt.h	9;"	d
+__INTERRUPTS_H	inc/interrupts.h	9;"	d
+__PORT_H	inc/port.h	9;"	d
+__TYPES_H	inc/types.h	9;"	d
+_stop	src/loader.s	/^_stop:$/;"	l
+access	inc/interrupts.h	/^        uint8_t access;$/;"	m	struct:InterruptManager::GateDescriptor
+base	inc/interrupts.h	/^        uint32_t base;$/;"	m	struct:InterruptManager::InterruptDescriptorTablePointer
+efault	Makefile	/^	echo 'set default=0' >> iso\/boot\/grub\/grub.cfg$/;"	m
+gdt_codeSegmentSelector	inc/interrupts.h	/^        uint16_t gdt_codeSegmentSelector;$/;"	m	struct:InterruptManager::GateDescriptor
+handlerAddressHighBits	inc/interrupts.h	/^        uint16_t handlerAddressHighBits;$/;"	m	struct:InterruptManager::GateDescriptor
+handlerAddressLowBits	inc/interrupts.h	/^        uint16_t handlerAddressLowBits;$/;"	m	struct:InterruptManager::GateDescriptor
+int16_t	inc/types.h	/^typedef short int16_t;$/;"	t
+int32_t	inc/types.h	/^typedef int int32_t;$/;"	t
+int64_t	inc/types.h	/^typedef long long int int64_t;$/;"	t
+int8_t	inc/types.h	/^typedef char int8_t;$/;"	t
+int_bottom	src/interruptstubs.s	/^int_bottom:$/;"	l
+interruptnumber	src/interruptstubs.s	/^    interruptnumber: .byte 0$/;"	l
+kernel_stack	src/loader.s	/^kernel_stack:$/;"	l
+loader	src/loader.s	/^loader:$/;"	l
+m_base_hi	inc/gdt.h	/^            uint8_t m_base_hi;$/;"	m	class:GlobalDescriptorTable::SegmentDescriptor
+m_base_lo	inc/gdt.h	/^            uint16_t m_base_lo;$/;"	m	class:GlobalDescriptorTable::SegmentDescriptor
+m_base_vhi	inc/gdt.h	/^            uint8_t m_base_vhi;$/;"	m	class:GlobalDescriptorTable::SegmentDescriptor
+m_codeSegmentSelector	inc/gdt.h	/^    SegmentDescriptor m_codeSegmentSelector;$/;"	m	class:GlobalDescriptorTable
+m_dataSegmentSelector	inc/gdt.h	/^    SegmentDescriptor m_dataSegmentSelector;$/;"	m	class:GlobalDescriptorTable
+m_flags_limit_hi	inc/gdt.h	/^            uint8_t m_flags_limit_hi;$/;"	m	class:GlobalDescriptorTable::SegmentDescriptor
+m_interruptDescriptorTable	inc/interrupts.h	/^    static GateDescriptor m_interruptDescriptorTable[256];$/;"	m	class:InterruptManager
+m_interruptDescriptorTable	src/interrupts.cpp	/^InterruptManager::GateDescriptor InterruptManager::m_interruptDescriptorTable[256];$/;"	m	class:InterruptManager	file:
+m_limit_lo	inc/gdt.h	/^            uint16_t m_limit_lo;$/;"	m	class:GlobalDescriptorTable::SegmentDescriptor
+m_nullSegmentSelector	inc/gdt.h	/^    SegmentDescriptor m_nullSegmentSelector;$/;"	m	class:GlobalDescriptorTable
+m_portnumber	inc/port.h	/^    uint16_t m_portnumber;$/;"	m	class:Port
+m_type	inc/gdt.h	/^            uint8_t m_type;$/;"	m	class:GlobalDescriptorTable::SegmentDescriptor
+m_unusedSegmentSelector	inc/gdt.h	/^    SegmentDescriptor m_unusedSegmentSelector;$/;"	m	class:GlobalDescriptorTable
+objects	Makefile	/^objects = .\/src\/loader.o $/;"	m
+picMasterCommand	inc/interrupts.h	/^    Port8BitSlow picMasterCommand;$/;"	m	class:InterruptManager
+picMasterData	inc/interrupts.h	/^    Port8BitSlow picMasterData;$/;"	m	class:InterruptManager
+picSlaveCommand	inc/interrupts.h	/^    Port8BitSlow picSlaveCommand;$/;"	m	class:InterruptManager
+picSlaveData	inc/interrupts.h	/^    Port8BitSlow picSlaveData;$/;"	m	class:InterruptManager
+reserved	inc/interrupts.h	/^        uint8_t reserved;$/;"	m	struct:InterruptManager::GateDescriptor
+size	inc/interrupts.h	/^        uint16_t size;$/;"	m	struct:InterruptManager::InterruptDescriptorTablePointer
+uint16_t	inc/types.h	/^typedef unsigned short uint16_t;$/;"	t
+uint32_t	inc/types.h	/^typedef unsigned int uint32_t;$/;"	t
+uint64_t	inc/types.h	/^typedef unsigned long long int uint64_t;$/;"	t
+uint8_t	inc/types.h	/^typedef unsigned char uint8_t;$/;"	t
+~GlobalDescriptorTable	src/gdt.cpp	/^GlobalDescriptorTable::~GlobalDescriptorTable($/;"	f	class:GlobalDescriptorTable
+~InterruptManager	src/interrupts.cpp	/^InterruptManager::~InterruptManager($/;"	f	class:InterruptManager
+~Port	src/port.cpp	/^Port::~Port($/;"	f	class:Port
+~Port16Bit	src/port.cpp	/^Port16Bit::~Port16Bit($/;"	f	class:Port16Bit
+~Port32Bit	src/port.cpp	/^Port32Bit::~Port32Bit($/;"	f	class:Port32Bit
+~Port8Bit	src/port.cpp	/^Port8Bit::~Port8Bit($/;"	f	class:Port8Bit
+~Port8BitSlow	src/port.cpp	/^Port8BitSlow::~Port8BitSlow($/;"	f	class:Port8BitSlow

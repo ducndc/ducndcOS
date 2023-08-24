@@ -1,8 +1,19 @@
+CURRENT_PATH = $(shell pwd)
+
+include $(CURRENT_PATH)/kernel.config
+
 CPPPARAMS = -m32 -w -fno-use-cxa-atexit -nostdlib -fno-builtin -fno-rtti -fno-exceptions -fno-leading-underscore
+CPPPARAMS += -I$(CURRENT_PATH)/inc
+
 ASPARAMS = --32
 LDPARAMS = -melf_i386
 
-objects = loader.o gdt.o port.o interruptstubs.o interrupts.o kernel.o
+objects = ./src/loader.o 
+objects += ./src/gdt.o 
+objects += ./src/port.o 
+objects += ./src/interruptstubs.o 
+objects += ./src/interrupts.o 
+objects += ./src/kernel.o
 
 %.o: %.cpp
 	g++ $(CPPPARAMS) -o $@ -c $<
@@ -31,6 +42,8 @@ mykernel.iso: mykernel.bin
 	echo '' >> iso/boot/grub/grub.cfg
 	grub-mkrescue --output=$@ iso
 	rm -rf iso
+
+run:
 	qemu-system-i386 mykernel.iso
 
 .PHONY: clean
